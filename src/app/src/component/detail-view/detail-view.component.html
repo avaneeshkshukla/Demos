@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row" *ngIf="user">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card text-center">
+        <div class="card-header">
+          User Details (ID: {{ user.id }})
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let key of keys">
+              <strong>{{ key }}:</strong> {{ user[key] }}
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer text-body-secondary">
+         <button (click)="goBack()" class="btn btn-primary primary">Go Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
